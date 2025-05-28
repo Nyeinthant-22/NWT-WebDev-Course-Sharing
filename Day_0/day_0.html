@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-0: HTML နဲ့ CSS မလေ့လာခင် သိထားသင့်တာလေးတွေ</title>
+    <link rel="shortcut icon" href="./N_logo.png" type="image/x-icon">
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:antiquewhite;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Container for Centering Content */
+        .container {
+            width: 90%;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: #070445d2;
+            color: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar .nav-links li {
+            margin-left: 20px;
+        }
+
+        .navbar .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .navbar .nav-links a:hover {
+            color: #007bff;
+        }
+
+        /* Main Content Area */
+        .main-content {
+            padding: 40px 0;
+        }
+
+        /* Content Boxes */
+        .content-box {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin-bottom: 20px;
+            transition: 0.5s ease;
+        }
+
+        .content-box:hover {
+            transform: scale(1.05);
+        }
+
+        .content-box h1,
+        .content-box h2,
+        .content-box h3 {
+            color: #007bff;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .content-box p {
+            margin-bottom: 10px;
+        }
+
+        .content-box ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        .content-box ul li {
+            margin-bottom: 5px;
+        }
+
+        .content-box a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .content-box a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #070445d2;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+        }
+
+        .footer .container {
+            border-top: 1px solid #5d5bc0;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="./N_logo.png" style="width: 50px; border-radius: 10px; margin-right: 10px;" alt=""> NWT
+            </a>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-content container">
+        <div class="content-box">
+            <h1>🌐 Day-0: HTML နဲ့ CSS မလေ့လာခင် သိထားသင့်တာလေးတွေ</h1>
+            <p>Website တွေ အတူတူမတည်ဆောက်ခင် အခြေခံလေးတွေကို အရင်နားလည်အောင် တစ်ချက်လောက် ပြန်ကြည့်ရအောင်။</p>
+            <p>Internet ဆိုတာ ဘာလဲ? Website ဆိုတာ ဘာလဲ? Webappဆိုတာ ဘာလဲ?</p>
+            <p>အကယ်၍ သင်က အခုမှ စလေ့လာတာဆိုရင် ဒီဆောင်းပါးက သင့်အတွက်ပါပဲ။</p>
+        </div>
+
+        <div class="content-box">
+            <h2>🚀 Internet ဆိုတာ ဘာလဲ?</h2>
+            <p>Internet ဆိုတာ ကွန်ပျူတာတွေ အချင်းချင်း စကားပြောလို့ရတဲ့ ကမ္ဘာကြီးရဲ့ ကွန်ယက်တစ်ခုပေါ့။ ဒီကွန်ပျူတာတွေက ဒေတာတွေကို ပို့လိုက်၊ လက်ခံလိုက်နဲ့ တစ်ကမ္ဘာလုံးကလူတွေကို ချိတ်ဆက်ပေးတယ်။ Website တွေ ကြည့်ခွင့်ပေးတယ်၊ ဗီဒီယိုတွေ ကြည့်ခွင့်ပေးတယ်၊ မက်ဆေ့ခ်ျတွေ ပို့ခွင့်ပေးတယ်။</p>
+            <h3>🧠 Internet ကို ပို့စတာရုံးကြီးတစ်ခုလို တွေးကြည့်လို့ရတယ်-</h3>
+            <ul>
+                <li>သင်က တောင်းဆိုမှုတစ်ခု ပို့လိုက်တယ် (ဥပမာ: <a href="youtube.com" target="_blank">youtube.com</a> လို့ ရိုက်ထည့်တာမျိုး)</li>
+                <li>နောက်ထပ် ကွန်ပျူတာတစ်လုံး (ဆာဗာ) က အဲဒီတောင်းဆိုမှုကို လက်ခံရတယ်</li>
+                <li>သင်တောင်းထားတဲ့အရာ (ဗီဒီယိုတွေ၊ Website တွေ၊ စာသားတွေ) ကို ပြန်ပို့ပေးတယ်</li>
+                <li>သင်ရဲ့ Browser က ရလဒ်ကို သင်ရဲ့မျက်နှာပြင်ပေါ်မှာ ပြပေးတယ်</li>
+            </ul>
+            <p>Website တစ်ခုဖွင့်တိုင်း Internet ဆက်သွယ်ရေး ဘယ်လောက်မြန်ပြီး ချောမွေ့လဲဆိုတာ ဒါပါပဲနော်။</p>
+        </div>
+
+        <div class="content-box">
+            <h2>🧱 Website ဆိုတာ ဘာလဲ?</h2>
+            <p>Website ဆိုတာ ဝက်ဘ်စာမျက်နှာတွေ စုစည်းထားတာဖြစ်ပြီး ဝက်ဘ်စာမျက်နှာတစ်ခုစီကို ကုတ်တွေနဲ့ တည်ဆောက်ထားတာ။ ဘယ်Website မဆိုရဲ့ အခြေခံအုတ်မြစ်နှစ်ခုကတော့-</p>
+            <ul>
+                <li><strong>HTML</strong> – ဖွဲ့စည်းပုံ (ခေါင်းစဉ်တွေ၊ စာပိုဒ်တွေ၊ ပုံတွေ စသည်ဖြင့်) ထည့်ပေးတယ်</li>
+                <li><strong>CSS</strong> – ပုံစံ (အရောင်တွေ၊ နေရာလွတ်တွေ၊ အပြင်အဆင်) ထည့်ပေးတယ်</li>
+            </ul>
+            <h3>📘 ဝက်ဘ်စာမျက်နှာတစ်ခုကို စာအုပ်တစ်အုပ်ထဲက စာမျက်နှာတစ်ရွက်လို့ စဉ်းစားကြည့်ပါ၊</h3>
+            <p>🌍 ပြီးတော့ Website တစ်ခုက အဲဒီစာမျက်နှာတွေနဲ့ ဖွဲ့စည်းထားတဲ့ စာအုပ်တစ်အုပ်လုံးပဲ ဖြစ်ပါတယ်။</p>
+            <p>Website တွေကို ဆာဗာတွေပေါ်မှာ သိမ်းထားပြီး Chrome ဒါမှမဟုတ် Firefox လို Browser တွေကို သုံးပြီး <a href="https://example.com" target="_blank">https://example.com</a> လို URL တစ်ခုကို ရိုက်ထည့်ခြင်းဖြင့် ဘယ်သူမဆို ဝင်ကြည့်လို့ရတယ်။</p>
+        </div>
+
+        <div class="content-box">
+            <h2>⚙️ Webappဆိုတာ ဘာလဲ?</h2>
+            <p>Webappဆိုတာ သင် အပြန်အလှန်လုပ်ဆောင်လို့ရတဲ့ Website တစ်မျိုးပဲ။ သတင်းအချက်အလက်တွေပဲ ပြနေတဲ့ စာမျက်နှာတွေနဲ့မတူဘဲ Webappတွေက သင်ကို အောက်ပါတို့ကို လုပ်ဆောင်နိုင်စေတယ်-</p>
+            <ul>
+                <li>ဝင်ရောက်ပါ (Log In)</li>
+                <li>မှတ်ချက်တွေ ရေးပါ (Post comments)</li>
+                <li>မက်ဆေ့ခ်ျတွေ ပို့ပါ (Send messages)</li>
+                <li>ပုံတွေ တင်ပါ (Upload images)</li>
+                <li>ဖောင်တွေ ဖြည့်ပါ (Fill out forms)</li>
+            </ul>
+            <p>Webapp ဥပမာတွေကတော့-</p>
+            <ul>
+                <li>Facebook (အပြန်အလှန်လုပ်ဆောင်၊ ပို့စ်တင်၊ မှတ်ချက်ပေး)</li>
+                <li>YouTube (ကြည့်ရှု၊ တင်၊ မှတ်ချက်ပေး)</li>
+                <li>Gmail (အီးမေးလ်တွေ ဖတ်ပြီး ပို့)</li>
+            </ul>
+            <p>Webappတစ်ခုကို HTML + CSS နဲ့ တည်ဆောက်ထားပြီး အပြန်အလှန်လုပ်ဆောင်မှုတွေ ဖန်တီးဖို့ JavaScript ကိုလည်း သုံးတယ်။</p>
+            <h3>💬 လွယ်လွယ်ပြောရရင်-</h3>
+            <ul>
+                <li>Website တစ်ခုက သင်ကို အရာတွေ ပြပေးတယ်</li>
+                <li>Webappတစ်ခုက သင်ကို အရာတွေ လုပ်ခွင့်ပေးတယ်</li>
+            </ul>
+        </div>
+
+        <div class="content-box">
+            <h2>🌍 Website တွေ တကယ် ဘယ်လိုအလုပ်လုပ်လဲ</h2>
+            <p>Website တစ်ခုကို သင် ဝင်ကြည့်တဲ့အခါ အောက်ပါအတိုင်း ဖြစ်ပျက်ပါတယ်-</p>
+            <ul>
+                <li>သင်က Browser ထဲမှာ ဝက်ဘ်လိပ်စာ (URL) ကို ရိုက်ထည့်တယ်</li>
+                <li>သင်ရဲ့Browser က ဆာဗာဆီ တောင်းဆိုမှုတစ်ခု ပို့တယ်</li>
+                <li>ဆာဗာက Website ရဲ့ ဖိုင်တွေ (HTML, CSS, JavaScript ဖြစ်နိုင်) ကို ရှာပြီး ပြန်ပို့ပေးတယ်</li>
+                <li>Browser က ဖိုင်တွေကို ဖတ်ပြီး ဝက်ဘ်စာမျက်နှာကို ပြပေးတယ်</li>
+            </ul>
+            <h3>📦 ပီဇာမှာတာနဲ့တူတယ်လို့ စဉ်းစားကြည့်လို့ရတယ်-</h3>
+            <ul>
+                <li>သင် (Browser ) က ပီဇာ (URL) မှာတယ်</li>
+                <li>ဆိုင် (ဆာဗာ) က ပီဇာ (Website ) ကို ပြင်ဆင်တယ်</li>
+                <li>ပီဇာကို လာပို့ပေးတယ် (တုံ့ပြန်မှု)</li>
+                <li>သင်က စားတယ် (Browser က စာမျက်နှာကို ပြပေးတယ်)</li>
+            </ul>
+            <p>အဲဒီလောက်မြန်ပြီး ဉာဏ်ပါတာပေါ့။</p>
+        </div>
+
+        <div class="content-box">
+            <h2>🛠️ ဒီစီးရီးအတွက် လိုအပ်မယ့် ပစ္စည်းတွေ</h2>
+            <p>စဖို့အတွက် ရှုပ်ထွေးတဲ့ ပစ္စည်းတွေ မလိုအပ်ပါဘူး။ ဒီအခြေခံတွေပဲ လိုအပ်တယ်-</p>
+            <h3>✔️ 1. ဝက်ဘ်Browser တစ်ခု</h3>
+            <p>Google Chrome, Firefox, ဒါမှမဟုတ် Microsoft Edge ကို သုံးပါ။</p>
+            <h3>✔️ 2. Code Editor တစ်ခု</h3>
+            <p>Visual Studio Code (VS Code) ကို သုံးပါ။ အခမဲ့ဖြစ်ပြီး HTML နဲ့ CSS ရေးဖို့အတွက် အရမ်းကောင်းတယ်။</p>
+            <h3>✔️ 3. အခြေခံ ဖိုင်စီမံခန့်ခွဲမှု</h3>
+            <p>အောက်ပါဖိုင်တွေနဲ့ အလုပ်လုပ်ရလိမ့်မယ်-</p>
+            <ul>
+                <li><code>index.html</code></li>
+                <li><code>style.css</code></li>
+            </ul>
+            <p>အောက်ပါတို့ကို လုပ်တတ်ဖို့ သေချာပါစေ-</p>
+            <ul>
+                <li>ဖိုဒါတွေ ဖန်တီးတာ</li>
+                <li>မှန်ကန်တဲ့ extension နဲ့ ဖိုင်တွေ သိမ်းတာ</li>
+            </ul>
+        </div>
+
+        <div class="content-box">
+            <h2>🧠 နောက်ဆုံး စဉ်းစားစရာလေးတွေ</h2>
+            <p>ဒါက Course လေးမစခင် သိသင့်တဲ့ အခြေခံပါပဲ။ Internet ဆိုတာ ဘာလဲ၊ Website တွေနဲ့ Webappတွေ ဘယ်လိုအလုပ်လုပ်လဲ၊ ဘယ်ပစ္စည်းတွေ သုံးရမယ်ဆိုတာ သင်နားလည်ပြီဆိုရင်တော့ သင်အဆင်သင့်ဖြစ်ပါပြီ။</p>
+            <p>မနက်ဖြန်ကျရင် သင်ရဲ့ ပထမဆုံး တကယ့်Website ကို တည်ဆောက်မယ် — HTML ကိုသုံးပြီး ရိုးရှင်းပေမယ့် ရှင်းလင်းတဲ့ Personal Website လေးတစ်ခုပေါ့။</p>
+            <p>🟢 စောင့်မျှော်ပေးပါဦးဗျ။</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Web Dev Basics. All rights reserved. | NWT</p>
+        </div>
+    </footer>
+</body>
+</html>
