@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="shortcut icon" href="./N_logo.png" type="image/x-icon" />
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: antiquewhite;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 960px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      }
+
+      .navbar {
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgb(28, 28, 98);
+      }
+
+      .navbar .logo {
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .navbar .logo img {
+        margin-right: 5px;
+      }
+
+      .navbar .logo span {
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+
+      .navbar .nav-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .navbar .nav-links {
+        list-style: none;
+      }
+
+      .navbar .nav-links li {
+        margin-left: 20px;
+      }
+
+      .navbar .nav-links a {
+        color: white;
+        text-decoration: none;
+        transition: 0.3s ease;
+      }
+
+      .navbar .nav-links a:hover {
+        color: rgb(254, 178, 78);
+      }
+
+      .content-box {
+        background-color: rgb(255, 255, 255);
+        padding: 20px;
+        margin-bottom: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        transition: 0.3s ease;
+      }
+
+      .content-box:hover {
+        transform: scale(1.01);
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: #333;
+      }
+      p,
+      li {
+        color: #555;
+        line-height: 1.6;
+      }
+      code {
+        background-color: #eee;
+        padding: 0.2rem 0.5rem;
+        border-radius: 5px;
+        font-family: monospace;
+      }
+      pre {
+        background: #f9f9f9;
+        padding: 1rem;
+        overflow-x: auto;
+        border-left: 4px solid #007acc;
+      }
+      a {
+        color: #007acc;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1rem;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #ddd;
+      }
+      th,
+      td {
+        padding: 0.5rem;
+        text-align: left;
+      }
+
+      footer {
+        text-align: center;
+        background-color: rgb(49, 49, 116);
+        color: white;
+        padding: 20px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="" class="logo">
+        <img
+          src="./N_logo.png"
+          alt=""
+          style="width: 50px; border-radius: 10px"
+        /><span>NWT</span>
+      </a>
+
+      <ul class="nav-links">
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <h1>🌐 HTML နှင့် CSS မိတ်ဆက်</h1>
+
+      <div class="content-box">
+        <h2>🟡 HTML ဆိုတာဘာလဲ။</h2>
+        <p>
+          <strong>HTML</strong> သည် <em>HyperText Markup Language</em> ကို
+          အတိုကောက်ခေါ်ခြင်း ဖြစ်သည်။ ၎င်းသည် ဝဘ်ဆိုက်များအားလုံး၏
+          အခြေခံအုတ်မြစ် ဖြစ်သည်။ ဝဘ်Web Page၏ ဖွဲ့စည်းပုံ သို့မဟုတ်
+          အရိုးစုအဖြစ် မှတ်ယူနိုင်သည်။ HTML သည် သင်၏ ဘရောက်ဆာကို
+          မည်သည့်အကြောင်းအရာများ ပြသရမည်ကို ပြောပြသည်- ခေါင်းစီးများ၊
+          စာပိုဒ်များ၊ ရုပ်ပုံများ၊ လင့်ခ်များနှင့် အခြားအရာများ ပါဝင်သည်။
+        </p>
+      </div>
+
+      <div class="content-box">
+        <h3>🔤 ဥပမာ:</h3>
+        <pre><code>&lt;h1&gt;ကျွန်ုပ်၏ ဝဘ်ဆိုက်မှ ကြိုဆိုပါသည်&lt;/h1&gt;
+&lt;p&gt;၎င်းသည် ကျွန်ုပ်၏ ပထမဆုံး စာပိုဒ်ဖြစ်သည်။&lt;/p&gt;</code></pre>
+      </div>
+
+      <div class="content-box">
+        <h2>🔵 CSS ဆိုတာဘာလဲ။</h2>
+        <p>
+          <strong>CSS</strong> သည် <em>Cascading Style Sheets</em> ကို
+          အတိုကောက်ခေါ်ခြင်း ဖြစ်သည်။ CSS သည် သင်၏ ဝဘ်ဆိုက်ကို လှပအောင်
+          ဖန်တီးပေးသည်။ ၎င်းသည် အရောင်များ၊ Fontများ၊ နေရာလွတ်များနှင့်
+          ပုံစံချခြင်းကဲ့သို့သော အရာများ၏ ပုံပန်းသဏ္ဌာန်ကို ပြောင်းလဲပေးသည်။
+          HTML က အရိုးစုဆိုပါက CSS က ဒီဇိုင်းနှင့် အပြင်အဆင်များ ဖြစ်သည်။
+        </p>
+      </div>
+
+      <div class="content-box">
+        <h3>🎨 ဥပမာ:</h3>
+        <pre><code>p {
+  color: blue;
+  font-size: 18px;
+}</code></pre>
+      </div>
+
+      <div class="content-box">
+        <h2>✅ ဘာကြောင့် HTML နှင့် CSS ကို အရင်လေ့လာသင့်တာလဲ။</h2>
+        <p>
+          JavaScript သို့မဟုတ် backend programming ကို မလေ့လာမီ ဝဘ်ဆိုက်များ၏
+          ဖွဲ့စည်းပုံနှင့် ဒီဇိုင်းပုံစံကို နားလည်ရန် လိုအပ်သည်။ HTML နှင့် CSS
+          တို့သည် Web developer တစ်ဦး ဖြစ်လာရန် ပထမဆုံး ခြေလှမ်းများ ဖြစ်သည်။
+        </p>
+      </div>
+
+      <div class="content-box">
+        <h2>🎯 လက်တွေ့ကမ္ဘာ နှိုင်းယှဉ်ချက်</h2>
+        <table>
+          <tr>
+            <th>ဝဘ် အယူအဆ</th>
+            <th>လက်တွေ့ကမ္ဘာနှင့် ညီမျှခြင်း</th>
+          </tr>
+          <tr>
+            <td>HTML</td>
+            <td>အဆောက်အအုံ၏ ဖွဲ့စည်းပုံ</td>
+          </tr>
+          <tr>
+            <td>CSS</td>
+            <td>Color ၊ Layouts ၊ Design</td>
+          </tr>
+          <tr>
+            <td>JavaScript</td>
+            <td>Interactive / အပြန်အလှန်တုံ့ပြန်မှု</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="content-box">
+        <h2>👀 ဥပမာ: ကိုယ်ရေးအကျဉ်း Web Page</h2>
+        <p>
+          HTML က ဘာလုပ်တယ်ဆိုတာ သိပြီဆိုတော့ HTML သီးသန့်နဲ့တည်ဆောက်ထားတဲ့
+          လက်တွေ့ဥပမာတစ်ခုကို ဒီမှာကြည့်ပါ။
+        </p>
+        <p>
+          <a href="./Personal_Bio/portfolio.html" target="_blank"
+            >👉 ကျွန်တော့်ရဲ့ ကိုယ်ရေးအကျဉ်း Web Page ကို ကြည့်ရန်</a
+          >
+        </p>
+        <p>
+          ဒီဥပမာက HTML သီးသန့်အသုံးပြုပြီး ရိုးရှင်းတဲ့ ကိုယ်ရေးအကျဉ်း
+          မိတ်ဆက်ကို ပြသထားပါတယ်။ ဒီဇိုင်းကို CSS အသုံးပြုပြီး နောက်မှ
+          ထပ်ထည့်ထားပါတယ်။
+        </p>
+      </div>
+    </div>
+
+    <footer >
+
+        © 2025 Web Dev Basics. All rights reserved. | NWT
+
+    </footer>
+  </body>
+</html>
