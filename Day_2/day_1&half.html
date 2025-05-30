@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="my">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 1½ — HTML Tags များ အသေးစိတ်လေ့လာခြင်း</title>
+    <link rel="shortcut icon" href="./N_logo.png" type="image/x-icon">
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: antiquewhite;
+      }
+
+      .navbar {
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgb(28, 28, 98);
+      }
+
+      .navbar .logo {
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .navbar .logo img {
+        margin-right: 5px;
+      }
+
+      .navbar .logo span {
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+
+      .navbar .nav-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .navbar .nav-links {
+        list-style: none;
+      }
+
+      .navbar .nav-links li {
+        margin-left: 20px;
+      }
+
+      .navbar .nav-links a {
+        color: white;
+        text-decoration: none;
+        transition: 0.3s ease;
+      }
+
+      .navbar .nav-links a:hover {
+        color: rgb(254, 178, 78);
+      }
+
+      .container {
+        width: 90%;
+        max-width: 960px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      }
+
+      .section {
+        background-color: white;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        margin-bottom: 30px;
+        padding: 20px;
+        border-radius: 10px;
+        line-height: 1.6;
+        transition: 0.5s ease;
+      }
+
+      .section:hover {
+        transform: scale(1.01);
+      }
+
+      .section ul {
+        list-style: none;
+      }
+
+      code {
+        background-color: #eee;
+        padding: 4px 8px;
+        display: block;
+        margin: 10px 0;
+        border-radius: 10px;
+        border-left: 4px solid rgb(31, 31, 71);
+        white-space: pre-wrap;
+      }
+
+      footer {
+        padding: 20px;
+        text-align: center;
+        margin-top: 20px;
+        background-color: rgb(35, 35, 94);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="" class="logo">
+        <img
+          src="./N_logo.png"
+          alt=""
+          style="width: 50px; border-radius: 10px"
+        /><span>NWT</span>
+      </a>
+
+      <ul class="nav-links">
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <div class="section">
+        <h2>🔰 ယနေ့ သင်ယူရမည့်အရာများ</h2>
+        <ul>
+          <li>HTML tag တစ်ခုစီ၏ လုပ်ဆောင်ချက်</li>
+          <li>ရိုးရှင်းသော ကုဒ်နမူနာများ</li>
+          <li>ဤ tags များကို အသုံးပြု၍ mini project တစ်ခု တည်ဆောက်ခြင်း</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>🔹 <code>&lt;h1&gt;</code> ဆိုတာဘာလဲ။</h2>
+        <p><strong>အသုံးပြုပုံ:</strong> ပင်မခေါင်းစီးကို သတ်မှတ်သည်။</p>
+        <code>&lt;h1&gt;မင်္ဂလာပါ၊ ကျွန်ုပ် William ဖြစ်ပါသည်။&lt;/h1&gt;</code>
+        <p>🖥️ ၎င်းသည် ကြီးမားထူထဲစွာ ပေါ်လာပြီး စာမျက်နှာခေါင်းစဉ်များအတွက် အလွန်ကောင်းမွန်သည်။</p>
+      </div>
+
+      <div class="section">
+        <h2>🔹 <code>&lt;p&gt;</code> ဆိုတာဘာလဲ။</h2>
+        <p><strong>အသုံးပြုပုံ:</strong> စာပိုဒ်တစ်ခု ထည့်သွင်းသည်။</p>
+        <code
+          >&lt;p&gt;ကျွန်ုပ်သည် HTML နှင့် CSS ဖြင့် ဝဘ်ဆိုက်များ တည်ဆောက်ရန်
+          လေ့လာနေပါသည်။&lt;/p&gt;</code
+        >
+      </div>
+
+      <div class="section">
+        <h2>🔹 <code>&lt;img&gt;</code> ဆိုတာဘာလဲ။</h2>
+        <p><strong>အသုံးပြုပုံ:</strong> ရုပ်ပုံတစ်ခု ပြသသည်။</p>
+        <code
+          >&lt;img src="profile.jpg" alt="ကျွန်ုပ်၏ ပရိုဖိုင်ပုံ" width="200"
+          /&gt;</code
+        >
+        <ul>
+          <li><code>src</code> = ရုပ်ပုံ လမ်းကြောင်း</li>
+          <li><code>alt</code> = အခြားရွေးချယ်စရာ စာသား</li>
+          <li><code>width</code> = ရုပ်ပုံ အရွယ်အစား</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>🔹 <code>&lt;a&gt;</code> ဆိုတာဘာလဲ။</h2>
+        <p><strong>အသုံးပြုပုံ:</strong> လင့်ခ်တစ်ခု ဖန်တီးသည်။</p>
+        <code
+          >&lt;a href="https://example.com" target="_blank"&gt;ကျွန်ုပ်၏
+          ဆိုက်ကို သွားရောက်ကြည့်ရှုပါ&lt;/a&gt;</code
+        >
+        <ul>
+          <li><code>href</code> = URL</li>
+          <li><code>target="_blank"</code> = tab အသစ်တွင် ဖွင့်သည်</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>🔹 <code>&lt;ul&gt;</code> နှင့် <code>&lt;li&gt;</code> ဆိုတာဘာလဲ။</h2>
+        <p><strong>အသုံးပြုပုံ:</strong> အစက်ပြစာရင်းများ ဖန်တီးသည်။</p>
+        <code>
+          &lt;ul&gt; &lt;li&gt;HTML&lt;/li&gt; &lt;li&gt;CSS&lt;/li&gt;
+          &lt;li&gt;JavaScript&lt;/li&gt; &lt;/ul&gt;
+        </code>
+      </div>
+
+      <div class="section">
+        <h2>🛠 နောက်ဆုံး Project: Mini Personal Page</h2>
+        <p>
+          ယခုထိ ကျွန်ုပ်တို့ သင်ယူခဲ့သော အရာအားလုံးကို အသုံးပြု၍ ရိုးရှင်းသော
+          ကိုယ်ရေးအကျဉ်း ဝဘ်စာမျက်နှာတစ်ခု ဖြစ်သည်-
+        </p>
+        <code>
+          
+          &lt;!DOCTYPE html&gt; 
+          &lt;html&gt; 
+          &lt;head&gt; 
+          &lt;title&gt;My First Web Page&lt;/title&gt;
+          &lt;/head&gt; 
+          &lt;body&gt; 
+          &lt;h1&gt;Hi, I’m William!&lt;/h1&gt;
+          &lt;p&gt;I’m learning web development and love building things online.&lt;/p&gt; 
+          &lt;img src="profile.jpg" alt="My Profile Photo" width="200" /&gt; 
+          &lt;h2&gt;My Skills&lt;/h2&gt;
+          &lt;ul&gt; 
+            &lt;li&gt;HTML&lt;/li&gt; 
+            &lt;li&gt;CSS&lt;/li&gt;
+            &lt;li&gt;JavaScript&lt;/li&gt; 
+          &lt;/ul&gt; 
+          &lt;p&gt;Visit my favorite site: &lt;a href="https://example.com" target="_blank"&gt;Click Here&lt;/a&gt; &lt;/p&gt; 
+          &lt;/body&gt; 
+          &lt;/html&gt;
+        
+        </code>
+      </div>
+    </div>
+
+    <footer>© 2025 Web Dev Basics. All rights reserved. | NWT</footer>
+  </body>
+  <script></script>
+</html>
