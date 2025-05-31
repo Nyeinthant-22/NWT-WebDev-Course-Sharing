@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 2: CSS fundamentals</title>
+  <link rel="shortcut icon" href="./N_logo.png" type="image/x-icon">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      padding: 0;
+      margin: 0;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+    .navbar {
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgb(28, 28, 98);
+      }
+
+      .navbar .logo {
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .navbar .logo img {
+        margin-right: 5px;
+      }
+
+      .navbar .logo span {
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+
+      .navbar .nav-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .navbar .nav-links {
+        list-style: none;
+      }
+
+      .navbar .nav-links li {
+        margin-left: 20px;
+      }
+
+      .navbar .nav-links a {
+        color: white;
+        text-decoration: none;
+        transition: 0.3s ease;
+      }
+
+      .navbar .nav-links a:hover {
+        color: rgb(254, 178, 78);
+      }
+    footer {
+      background-color: #0077cc;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+    h1 {
+      color: #0077cc;
+    }
+    code {
+      background-color: #eee;
+      padding: 5px;
+      display: block;
+      margin: 10px 0;
+      white-space: pre-wrap;
+      border-radius: 10px;
+      border-left: 4px solid blueviolet;
+    }
+    .example {
+      border: 1px solid #ccc;
+      background: #fff;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+      <a href="" class="logo">
+        <img
+          src="./N_logo.png"
+          alt=""
+          style="width: 50px; border-radius: 10px"
+        /><span>NWT</span>
+      </a>
+
+      <ul class="nav-links">
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+  <div class="container">
+    <h1>🟣 နေ့ ၂ — CSS အခြေခံများ</h1>
+    <p>ဒီနေ့မှာတော့ CSS ကိုအသုံးပြုပြီး သင့်ရဲ့ HTML စာမျက်နှာကို ဘယ်လို ပိုကောင်းအောင် ဖန်တီးမလဲဆိုတာ လေ့လာရပါမယ်။ CSS က **စတိုင်လ်** — အရောင်များ၊ နေရာလွတ်များ၊ ဖောင့်များ အစရှိသည်တို့ကို ထည့်သွင်းပေးနိုင်ပါတယ်။</p>
+
+    <h2>🔗 CSS ကို HTML နှင့် ချိတ်ဆက်ခြင်း</h2>
+    <p><code>&lt;head&gt;</code> ထဲမှာ <code>&lt;link&gt;</code> tag ကိုသုံးပြီး CSS ကို ချိတ်ဆက်နိုင်ပါတယ်:</p>
+    <code>&lt;link rel="stylesheet" href="styles.css" /&gt;</code>
+
+    <h2>🎨 အခြေခံ CSS ဂုဏ်သတ္တိများ (Properties)</h2>
+    <div class="example">
+      <p><strong>ဥပမာ:</strong> ရိုးရှင်းတဲ့ CSS ဖိုင်တစ်ခုက အောက်ပါအတိုင်း ဖြစ်နိုင်ပါတယ်:</p>
+      <code>
+body {
+  background-color: #f0f0f0;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: darkblue;
+}
+
+p {
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+}
+      </code>
+    </div>
+
+    <h2>📁 ဖိုင်တည်ဆောက်ပုံ</h2>
+    <p>ဖိုင်နှစ်ခုလုံးကို ဖိုဒါတစ်ခုတည်းမှာ ရှိနေစေဖို့ သေချာပါစေ:</p>
+    <ul>
+      <li><strong>index.html</strong> — သင့်ရဲ့ HTML စာမျက်နှာ</li>
+      <li><strong>styles.css</strong> — သင့်ရဲ့ CSS ဖိုင်</li>
+    </ul>
+
+    <h2>🧪 လေ့ကျင့်ရေး ပရောဂျက်</h2>
+    <p>မနေ့ကလိုပဲ ရိုးရှင်းတဲ့ ကိုယ်ရေးအကျဉ်းစာမျက်နှာတစ်ခုကို ဖန်တီးပါ၊ ဒါပေမဲ့ အခုတော့ CSS ကိုသုံးပြီး အရောင်တွေ၊ ဖောင့်တွေနဲ့ နေရာလွတ်တွေကို ထည့်သွင်းပါ။ ဒါကို "သင့်ရဲ့ပုံစံ" ဖြစ်အောင် ပြုလုပ်ကြည့်ပါ။</p>
+  </div>
+
+  <footer>
+    © 2025 Web Dev Basics. All rights reserved. | NWT
+  </footer>
+</body>
+</html>
