@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="my">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 3: More HTML Tags + Attributes</title>
+    <link rel="shortcut icon" href="./N_logo.png" type="image/x-icon" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        padding: 0;
+        margin: 0;
+        background-color: #f2f2f2;
+        color: #333;
+      }
+      .navbar {
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgb(28, 28, 98);
+      }
+      .navbar .logo {
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .navbar .logo img {
+        margin-right: 5px;
+      }
+      .navbar .logo span {
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+      .navbar .nav-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+      }
+      .navbar .nav-links li {
+        margin-left: 20px;
+      }
+      .navbar .nav-links a {
+        color: white;
+        text-decoration: none;
+        transition: 0.3s ease;
+      }
+      .navbar .nav-links a:hover {
+        color: rgb(254, 178, 78);
+      }
+      footer {
+        background-color: #0077cc;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+      }
+      .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        border-radius: 10px;
+      }
+      h1,
+      h2 {
+        color: #0077cc;
+      }
+      code {
+        background-color: #eee;
+        padding: 5px;
+        display: block;
+        margin: 10px 0;
+        white-space: pre-wrap;
+        border-radius: 10px;
+        border-left: 4px solid blueviolet;
+      }
+      .example {
+        border: 1px solid #ccc;
+        background: #fff;
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+      .content-box {
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+        border-radius: 10px;
+        transition: 0.5s;
+      }
+
+      .content-box:hover {
+        transform: scale(1.01);
+      }
+      @media (max-width: 768px) {
+        .container {
+          margin: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="#" class="logo">
+        <img
+          src="./N_logo.png"
+          alt=""
+          style="width: 50px; border-radius: 10px"
+        />
+        <span>NWT</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <h1>🟠 Day 3 — HTML Tags အသစ်များ + Attributes</h1>
+
+      <div class="content-box">
+        <p>
+          ဒီနေ့မှာတော့ HTML Tag အသစ်တွေနဲ့ Attributes တွေကို လေ့လာပါမယ်။
+          ဒီနည်းလမ်းတွေက Website မှာ Form တစ်ခု တည်ဆောက်ဖို့ အရေးကြီးပါတယ်။
+        </p>
+      </div>
+
+      <div class="content-box">
+        <h2>📌 အသစ်တွေထဲက Tag များ</h2>
+        <ul>
+          <li><strong>&lt;form&gt;</strong> — user input form တည်ဆောက်ရန်</li>
+          <li><strong>&lt;input&gt;</strong> — data ထည့်ဖို့အတွက်</li>
+          <li><strong>&lt;button&gt;</strong> — button တစ်ခုဖန်တီးရန်</li>
+          <li><strong>&lt;label&gt;</strong> — input label ထည့်ရန်</li>
+          <li>
+            <strong>&lt;div&gt;</strong>, <strong>&lt;span&gt;</strong> — layout
+            & inline grouping
+          </li>
+          <li>
+            <strong>&lt;strong&gt;</strong>, <strong>&lt;em&gt;</strong> —
+            bold/italic style
+          </li>
+        </ul>
+      </div>
+
+      <div class="content-box">
+        <h2>⚙️ HTML Attributes ဆိုတာဘာလဲ?</h2>
+        <p>
+          Attributes တွေက Tag ကိုအသုံးပြုတဲ့အချိန် extra info ထည့်ဖို့လိုပါတယ်။
+        </p>
+        <code>
+          &lt;img src="photo.jpg" alt="My photo" title="Profile Picture"
+          width="200" /&gt;
+        </code>
+        <p>
+          ဒီမှာ <code>src</code>, <code>alt</code>, <code>title</code>,
+          <code>width</code> တို့ဟာ attribute တွေပဲ ဖြစ်ပါတယ်။
+        </p>
+      </div>
+
+      <div class="content-box">
+        <h2>📎 Commonly Used Attributes</h2>
+        <ul>
+          <li><strong>href</strong> — link များအတွက်</li>
+          <li><strong>src</strong> — image file path</li>
+          <li><strong>alt</strong>, <strong>title</strong> — description</li>
+          <li>
+            <strong>type</strong>, <strong>placeholder</strong>,
+            <strong>value</strong> — form input တွေအတွက်
+          </li>
+          <li><strong>target</strong> — link open behavior</li>
+        </ul>
+      </div>
+
+      <div class="content-box">
+        <h2>🧾 Semantic Tags</h2>
+        <p>Page structure အတွက် အသုံးဝင်သော tag များ:</p>
+        <ul>
+          <li>
+            <strong>&lt;header&gt;</strong>, <strong>&lt;footer&gt;</strong>
+          </li>
+          <li>
+            <strong>&lt;section&gt;</strong>, <strong>&lt;article&gt;</strong>
+          </li>
+        </ul>
+      </div>
+
+      <div class="content-box">
+        <h2>🧪 လေ့ကျင့်ရေး — Contact Info Form</h2>
+        <div class="example">
+          <p><strong>ဥပမာ:</strong></p>
+          <code>
+            &lt;form&gt; &lt;label for="name"&gt;Name:&lt;/label&gt; &lt;input
+            type="text" id="name" name="name" placeholder="Enter your name"
+            /&gt; &lt;label for="email"&gt;Email:&lt;/label&gt; &lt;input
+            type="email" id="email" name="email" placeholder="Enter your email"
+            /&gt; &lt;button type="submit"&gt;Submit&lt;/button&gt;
+            &lt;/form&gt;
+          </code>
+        </div>
+      </div>
+    </div>
+
+    <footer>© 2025 Web Dev Basics. All rights reserved. | NWT</footer>
+  </body>
+</html>
