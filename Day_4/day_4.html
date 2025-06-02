@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 4: CSS Styling Continued</title>
+  <link rel="icon" href="./N_logo.png" type="image/x-icon" />
+  
+  <!-- 🔤 Google Fonts with @import -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .navbar {
+      background-color: #1c1c62;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    .logo img {
+      width: 40px;
+      margin-right: 10px;
+      border-radius: 10px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      transition: 0.5s;
+    }
+
+    .nav-links a:hover {
+      color: #da8422;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      color: #007acc;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .info {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+      padding: 20px;
+      margin: 10px;
+      border-radius: 10px;
+    }
+
+    .info p {
+      font-size: 1rem;
+      margin-bottom: 8px;
+      
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      display: block;
+    }
+
+    button {
+      background-color: #007acc;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      margin-top: 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #005c99;
+    }
+
+    footer {
+      background-color: #007acc;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+    }
+
+    /* Layout tips */
+    .two-columns {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .two-columns .left, .two-columns .right {
+      width: 50%;
+    }
+
+    @media (max-width: 768px) {
+      .two-columns {
+        flex-direction: column;
+      }
+      .two-columns .left, .two-columns .right {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="./N_logo.png" alt="logo" />
+      <span>NWT</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>💠 Day 4: fonts၊ colors နှင့် Layout ဖြင့် ပုံစံပြုလုပ်ခြင်း</h1>
+
+    <section class="info">
+      <div class="two-columns">
+        <div class="left">
+          <p><strong>အမည်:</strong> ဝီလျံ</p>
+          <p><strong>ရာထူး:</strong> Web Developer</p>
+          <p><strong>တည်နေရာ:</strong> ရန်ကုန်၊ မြန်မာ</p>
+        </div>
+        <div class="right">
+          <p><strong>အီးမေးလ်:</strong> william@example.com</p>
+          <p><strong>ဝက်ဘ်ဆိုက်:</strong> www.williamweb.dev</p>
+          <p><strong>ကျွမ်းကျင်မှုများ:</strong> HTML, CSS, JavaScript</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <form>
+        <label for="fullname">သင့်အမည်</label>
+        <input type="text" id="fullname" placeholder="ဥပမာ။ ဝီလျံ" />
+
+        <label for="email">သင့်အီးမေးလ်</label>
+        <input type="email" id="email" placeholder="ဥပမာ။ you@mail.com" />
+
+        <label for="msg">မက်ဆေ့ချ်</label>
+        <input type="text" id="msg" placeholder="တစ်ခုခုပြောပါ..." />
+
+        <button type="submit">တင်သွင်းမည်</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    🚀 2025 Web Dev Course | Designed by William
+  </footer>
+</body>
+</html>
