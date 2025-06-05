@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 5: Box Model + Border & Shadow</title>
+  <link rel="shortcut icon" href="./N_logo.png" type="image/x-icon" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .navbar {
+      padding: 10px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: rgb(28, 28, 98);
+    }
+    .navbar .logo {
+      display: flex;
+      align-items: center;
+      color: white;
+      text-decoration: none;
+    }
+    .navbar .logo img {
+      margin-right: 10px;
+      width: 50px;
+      border-radius: 10px;
+    }
+    .navbar .nav-links {
+      list-style: none;
+      display: flex;
+    }
+    .navbar .nav-links li {
+      margin-left: 20px;
+    }
+    .navbar .nav-links a {
+      color: white;
+      text-decoration: none;
+    }
+    .navbar .nav-links a:hover {
+      color: rgb(254, 178, 78);
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #005aab;
+    }
+    code {
+      background: #f4f4f4;
+      padding: 10px;
+      display: block;
+      border-left: 4px solid blueviolet;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      white-space: pre-wrap;
+    }
+    .card-example {
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      background-color: #fff;
+      margin-top: 20px;
+    }
+    .card-example h3 {
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    }
+    footer {
+      background-color: #2f207a;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+    @media (max-width: 768px) {
+      .container {
+        margin: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="#" class="logo">
+      <img src="./N_logo.png" alt="NWT" />
+      <span>NWT</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>🟢 Day 5 — Box Model + Border & Shadow Effects</h1>
+    <p>ဒီနေ့မှာတော့ <strong>Box Model</strong> ဆိုတာ ဘာလဲ၊ spacing (margin/padding) တွေ၊ border အမျိုးအစားတွေနဲ့ UI ပိုကောင်းအောင်ဖန်တီးဖို့ shadow များ အသုံးပြုပုံကို လေ့လာပါမယ်။</p>
+
+    <h2>📦 Box Model ဆိုတာ</h2>
+    <p>HTML elements တစ်ခုချင်းစီဟာ content, padding, border, margin ဆိုတဲ့ 4 layers ပါတယ်။</p>
+    <code>
+/* Box Model Example */
+.card {
+  margin: 20px;
+  padding: 15px;
+  border: 2px solid #ccc;
+}
+    </code>
+
+    <h2>🧱 Border & Rounded Corners</h2>
+    <p><code>border</code> ဟာ element အနားအနေနဲ့ line ထည့်ပေးတာဖြစ်ပြီး, <code>border-radius</code> ကတော့ ထောင့်များကို ပတ်ဝန်းကျင် ပုံစံလုပ်ပေးတယ်။</p>
+    <code>
+.card {
+  border: 2px solid #0077cc;
+  border-radius: 10px;
+}
+    </code>
+
+    <h2>🌫️ Shadow Effects</h2>
+    <p><code>box-shadow</code> ကိုအသုံးပြုပြီး element များကို ထင်သထင်မြင် မြင်ရအောင်လုပ်နိုင်ပါတယ်။ <code>text-shadow</code> ကတော့စာသားအတွက်ပါ။</p>
+    <code>
+.card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+    </code>
+
+    <h2>📌 လေ့ကျင့်ရေး — Card Box ဖန်တီးခြင်း</h2>
+    <p>ကိုယ်တိုင်ကောင်းမွန်တဲ့ card တစ်ခုကို ဖန်တီးပါ။ ဥပမာ:</p>
+    <div class="example">
+      <img src="./img/card_example.png" alt="Card Example Preview" style="width:100%;display:block;margin-bottom:10px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.1);" />
+      <div class="card-example">
+        <h3>👩 Mg Mg</h3>
+        <p>Frontend Developer | 🇲🇲 Yangon, Myanmar</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Web Dev Basics. All rights reserved. | NWT
+  </footer>
+</body>
+</html>
