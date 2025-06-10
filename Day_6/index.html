@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 6: CSS Positioning & Flexbox</title>
+  <link rel="shortcut icon" href="./N_logo.png" type="image/x-icon" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .navbar {
+      padding: 10px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: rgb(28, 28, 98);
+    }
+    .navbar .logo {
+      display: flex;
+      align-items: center;
+      color: white;
+      text-decoration: none;
+    }
+    .navbar .logo img {
+      margin-right: 10px;
+      width: 50px;
+      border-radius: 10px;
+    }
+    .navbar .nav-links {
+      list-style: none;
+      display: flex;
+    }
+    .navbar .nav-links li {
+      margin-left: 20px;
+    }
+    .navbar .nav-links a {
+      color: white;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+    .navbar .nav-links a:hover {
+      color: rgb(254, 178, 78);
+    }
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #005aab;
+    }
+    code {
+      background: #f4f4f4;
+      padding: 10px;
+      display: block;
+      border-left: 4px solid darkorange;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      white-space: pre-wrap;
+    }
+    .bio-flexbox {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      max-width: 100%;
+    }
+    .bio-flexbox img {
+      width: 150px;
+      border-radius: 10px;
+    }
+    .bio-flexbox .text {
+      flex: 1;
+    }
+    .position-demo {
+      position: relative;
+      margin-top: 40px;
+      background: tomato;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+    .absolute-box {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgb(53, 24, 108);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+    footer {
+      background-color: #0077cc;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+    @media (max-width: 768px) {
+      .bio-flexbox {
+        flex-direction: column;
+        text-align: center;
+      }
+      .bio-flexbox img {
+        width: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="#" class="logo">
+      <img src="./N_logo.png" alt="NWT" />
+      <span>NWT</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>🔵 Day 6 — CSS Positioning + Flexbox Intro</h1>
+    <p>ဒီနေ့မှာတော့ layout ဖန်တီးရာမှာ အရေးကြီးတဲ့ <strong>position</strong> နှင့် <strong>flexbox</strong> ကိုလေ့လာပါမယ်။</p>
+
+    <h2>📍 Positioning</h2>
+    <p>
+      <strong>CSS Positioning</strong> ကိုသုံးပြီး HTML elements တွေကို မိမိလိုချင်တဲ့နေရာမှာ ထားနိုင်ပါတယ်။ အောက်မှာရှိတဲ့အတိုင်း အမျိုးအစားအနည်းငယ်ရှိပါတယ် -
+      <ul>
+        <li><strong>static</strong>: မူလအတိုင်းပဲ ရှိနေမယ်။ (Default)</li>
+        <li><strong>relative</strong>: မူလနေရာကနေ အနည်းငယ်ရွှေ့နိုင်ပေမယ့် နေရာယူထားသေးတယ်။</li>
+        <li><strong>absolute</strong>: အနီးဆုံး <code>position: relative</code> ပါတဲ့ container (မရှိရင် viewport) ကို အခြေခံပြီး တည်နေရာသတ်မှတ်နိုင်တယ်။ မူလနေရာမှာ မရှိတော့ဘူး။</li>
+        <li><strong>fixed</strong>: Browser window ကို အခြေခံပြီး တည်နေရာသတ်မှတ်တယ်။ စာမျက်နှာကို scroll လုပ်လည်း မရွှေ့ဘူး။</li>
+        <li><strong>sticky</strong>: scroll လုပ်တဲ့အခါမှာ relative နဲ့ fixed ကြားမှာ ပြောင်းလဲနိုင်တယ်။</li>
+      </ul>
+      ဥပမာအနေနဲ့ အောက်ကနီရောင် box ကတော့ relative ဖြစ်တဲ့ container အတွင်းမှာ absolute နဲ့ထားတာပါ။
+    </p>
+    <code>
+position: static;   /* default */
+position: relative; /* မူလနေရာကနေရွှေ့ */
+position: absolute; /* အနီးဆုံး relative ကိုအခြေခံ */
+    </code>
+    <div class="position-demo">
+      <p>ဒီစာသားက relative ဖြစ်နေတယ်။ (This text is inside a relatively positioned box.)</p>
+      <div class="absolute-box">absolute box</div>
+    </div>
+
+    <h2>🧲 Flexbox Layout</h2>
+    <code>
+display: flex;
+justify-content: space-between; /* or center, flex-start */
+align-items: center; /* vertical alignment */
+    </code>
+
+    <div class="bio-flexbox">
+      <img src="./bio.png" alt="Alexei the Cartoon Character" />
+      <div class="text">
+        <h3>Alexei</h3>
+        <p>
+          <strong>Species:</strong> Mobian / Short-Beaked Echidna<br>
+          <strong>Age:</strong> 20<br>
+          <strong>Abilities:</strong>
+          <ul>
+            <li>Excellent visual artist and writer</li>
+            <li>Eidetic memory</li>
+            <li>Competent engineer and hacker</li>
+          </ul>
+          <strong>Origin:</strong> Albion<br>
+          <strong>Attire:</strong> Glasses, green jacket, paint-stained shorts, black shoes
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Flexbox Layout Practice | NWT
+  </footer>
+</body>
+</html>
