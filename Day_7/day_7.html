@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 7: Navigation Menu</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navigation Styles */
+    nav {
+      background-color: #2b2b80;
+      padding: 15px 30px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      padding: 8px 12px;
+      transition: 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #f0a500;
+      border-radius: 6px;
+      color: #2b2b80;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+      color: #2b2b80;
+    }
+
+    .info-box {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-left: 6px solid #2b2b80;
+    }
+
+    .howto-box {
+      background-color: #e9ecef;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#">🏠 Home</a></li>
+      <li><a href="#">📄 About</a></li>
+      <li><a href="#">📞 Contact</a></li>
+      <li><a href="#">📰 Blog</a></li>
+    </ul>
+  </nav>
+
+  <h1>🟣 Day 7: Navigation Menu (Using Lists & Links)</h1>
+
+  <div class="info-box">
+    <strong>What does a navigation bar do?</strong><br>
+    <span style="display:block; margin:10px 0 18px 0;">
+      A navigation bar (nav bar) helps users move between different sections or pages of a website. It provides quick access to important links, making the site easier to use and improving the overall user experience.
+    </span>
+    <div class="howto-box">
+      <strong>How to create a navigation bar?</strong>
+      <ol>
+        <li>Use the <code>&lt;nav&gt;</code> tag in your HTML.</li>
+        <li>Place your links inside a <code>&lt;ul&gt;</code> (unordered list) with <code>&lt;li&gt;</code> (list items).</li>
+        <li>Wrap each link with an <code>&lt;a&gt;</code> tag.</li>
+        <li>Style the navigation bar with CSS for background color, spacing, and hover effects.</li>
+      </ol>
+    </div>
+    <div class="howto-box myanmar">
+      <strong>Navigation bar ကိုဘယ်လိုဖန်တီးရမလဲ?</strong>
+      <ol>
+        <li>HTML မှာ <code>&lt;nav&gt;</code> tag ကိုသုံးပါ။</li>
+        <li>Links တွေကို <code>&lt;ul&gt;</code> (unordered list) နဲ့ <code>&lt;li&gt;</code> (list item) ထဲမှာရေးပါ။</li>
+        <li>တစ်ခုချင်းစီကို <code>&lt;a&gt;</code> tag နဲ့ link ပေးပါ။</li>
+        <li>CSS နဲ့ background color, spacing, hover effect တွေထည့်ပြီး အလှဆင်ပါ။</li>
+      </ol>
+    </div>
+  </div>
+
+  <footer style="margin-top:40px; background:#2b2b80; color:white; text-align:center; padding:18px 0;">
+    <div>
+      <strong>NWT | Web Development Course</strong><br>
+    </div>
+  </footer>
+
+</body>
+</html>
